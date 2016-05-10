@@ -1,0 +1,101 @@
+{
+  "name": "owl-react",
+  "version": "1.0.0",
+  "description": "S/V Owl. Sailboat Info Website",
+  "homepage": "https://github.com/cape-io/owl-react",
+  "author": "Kai Curry <kai@cape.io> (http://github.com/webmasterkai)",
+  "contributors": [
+    {
+      "name": "Kai Curry",
+      "email": "kai@cape.io"
+    }
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
+    "build": "npm run build:webpack",
+    "postinstall": "mkdir -p lib && babel ./src -d lib && npm run build",
+    "start": "node server.js",
+    "lint": "eslint src"
+  },
+  "browser": "src/index.js",
+  "main": "lib/node.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cape-io/acf-client"
+  },
+  "bugs": {
+    "url": "https://github.com/cape-io/acf-client/issues"
+  },
+  "keywords": [
+    "cape",
+    "react",
+    "reactjs",
+    "boilerplate",
+    "hot",
+    "reload",
+    "hmr",
+    "live",
+    "edit",
+    "webpack",
+    "babel",
+    "react-transform"
+  ],
+  "license": "CC0-1.0",
+  "engines": {
+    "node": ">=5.0.0"
+  },
+  "dependencies": {
+    "cape-redux-socket": "^2.0.1",
+    "classnames": "^2.2.5",
+    "isomorphic-fetch": "^2.2.1",
+    "location-info": "^3.1.0",
+    "lodash": "^4.12.0",
+    "moment": "^2.13.0",
+    "normalizr": "^2.0.1",
+    "query-string": "^4.1.0",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-json-inspector": "^7.0.0",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "redux-field": "^3.2.0",
+    "redux-graph": "^1.0.2",
+    "redux-history-sync": "^1.4.0",
+    "redux-localstorage": "^1.0.0-rc4",
+    "redux-thunk": "^2.1.0",
+    "reselect": "^2.5.1",
+    "seamless-immutable": "^6.1.0",
+    "socket.io-client": "^1.4.6",
+    "validator": "^5.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.8.0",
+    "babel-core": "^6.8.0",
+    "babel-eslint": "^6.0.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-polyfill": "^6.8.0",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-babel": "^3.2.0",
+    "eslint-plugin-import": "^1.7.0",
+    "eslint-plugin-react": "^5.1.1",
+    "express": "^4.13.4",
+    "node-libs-browser": "^1.0.0",
+    "react-transform-catch-errors": "^1.0.2",
+    "react-transform-hmr": "^1.0.4",
+    "redbox-react": "^1.2.4",
+    "redux-devtools": "^3.3.1",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.0.11",
+    "redux-logger": "^2.6.1",
+    "rimraf": "^2.5.2",
+    "webpack": "^1.13.0",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.10.0"
+  }
+}
