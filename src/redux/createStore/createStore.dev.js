@@ -14,7 +14,7 @@ export default function createStoreDev(reducer, initState, middleware) {
   )
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers
-    module.hot.accept('./reducer', () => {
+    module.hot.accept('../reducer', () => {
       const nextRootReducer = require('../reducer')
       store.replaceReducer(nextRootReducer)
     })
