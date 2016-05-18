@@ -5,10 +5,10 @@ import 'babel-polyfill'
 
 import configureStore from './redux/configureStore'
 // Root React component.
-import Root from './containers/Root'
+import Root from './redux/Root'
 
 // Define our inital state object. This could be a fetch() to an API endpoint.
-const initialState = window.__data || {}
+const initialState = window.reactData || {}
 // Configure and create our Redux store.
 const store = configureStore(initialState)
 

@@ -1,7 +1,7 @@
 const path = require('path')
-const express = require('express')
+const Express = require('express')
 
-const app = new express()
+const app = new Express()
 
 const port = process.env.PORT || 3000
 
@@ -9,14 +9,14 @@ if (process.env.NODE_ENV !== 'production') {
   require('./devServer')(app)
 }
 
-app.use(express.static('static'))
+app.use(Express.static('static'))
 
 // Respond to everything else with index.html
-app.use(function (req, res) {
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, 'static', 'index.html'))
 })
 
-app.listen(port, function (error) {
+app.listen(port, (error) => {
   if (error) {
     console.error(error)
   } else {
