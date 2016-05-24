@@ -1,5 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
+const pkgInfo = require('./package')
 
 module.exports = {
   devtool: 'source-map',
@@ -15,7 +16,8 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('production'),
+        NODE_ENV: JSON.stringify('production'),
+        APP_VERSION: JSON.stringify(pkgInfo.version),
       },
     }),
     new webpack.optimize.UglifyJsPlugin({
@@ -28,12 +30,8 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        loaders: [ 'babel' ],
         include: path.join(__dirname, 'src'),
-        loader: 'babel',
-        query: {
-          cacheDirectory: true,
-        },
       },
       { test: /\.json$/, loader: 'json' },
     ],

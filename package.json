@@ -1,6 +1,6 @@
 {
   "name": "owl-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "S/V Owl. Sailboat Info Website",
   "homepage": "https://github.com/cape-io/owl-react",
   "author": "Kai Curry <kai@cape.io> (http://github.com/webmasterkai)",
@@ -23,10 +23,10 @@
   "main": "lib/node.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cape-io/acf-client"
+    "url": "https://github.com/cape-io/owl-react"
   },
   "bugs": {
-    "url": "https://github.com/cape-io/acf-client/issues"
+    "url": "https://github.com/cape-io/owl-react/issues"
   },
   "keywords": [
     "cape",
