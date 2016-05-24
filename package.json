@@ -1,6 +1,6 @@
 {
   "name": "owl-react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "S/V Owl. Sailboat Info Website",
   "homepage": "https://github.com/cape-io/owl-react",
   "author": "Kai Curry <kai@cape.io> (http://github.com/webmasterkai)",
@@ -15,7 +15,7 @@
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run build:webpack",
     "dev": "SOCKET_LOC=/ node server.js",
-    "postinstall": "mkdir -p lib && babel ./src -d lib && npm run build",
+    "postinstall": "mkdir -p lib && NODE_ENV=production babel ./src -d lib && npm run build",
     "start": "node server.js",
     "lint": "eslint src"
   },
